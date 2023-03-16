@@ -10,7 +10,7 @@ My class work from [BIMM143](https://bioboot.github.io/bimm143_W23/) w23 at Univ
 - Class 6: Why, when and how of writing your own R functions
 - Class 7: [Introduction to machine learning for Bioinformatics](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/BIMM143%20Lab%2007.md)
 - Class 8: Analysis and visualization of high dimensional datasets
-- Class 9: Structural Bioinformatics (AlphaFold)
+- Class 9: [Structural Bioinformatics (AlphaFold)](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/NEW%20BIMM143%20Lab09.md)
 - Class 10: Halloween Candy Mini-Project
 - Class 11: Genome informatics and high throughput sequencing
 - Class 12: Transcriptomics, RNA-Seq analysis, and the interpretation of gene lists
