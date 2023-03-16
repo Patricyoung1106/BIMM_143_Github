@@ -19,6 +19,6 @@ My class work from [BIMM143](https://bioboot.github.io/bimm143_W23/) w23 at Univ
 - Class 15: Essential UNIX for bioinformatics
 - Class 16: Analyzing sequencing data in the cloud
 - Class 17: Vaccination rate mini project
-- Class 18: Mutational signatures of cancer mini project
+- Class 18: [Mutational signatures of cancer mini project](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/Lab%2018.md)
 - Class 19: [Investigating pertussis resurgence mini project](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/BIMM%20143%20Lab%2019.md)
 - Class 20: Find A Gene Project 
