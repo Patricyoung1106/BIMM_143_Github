@@ -1,0 +1,156 @@
+---
+title: "Class 05: Data Visualization with GGPLOT"
+author: "Patric Young"
+format: pdf
+editor: visual
+---
+
+Plotting in R
+
+R has multiple plotting and graphics systems. The most popular of which is ggplot2.
+
+We have already played with "base" R graphics. This comes along with R "out of the box".
+
+Compared to base R plots ggplot is much more verbose - I need to write more code to get simple plots like the above.
+
+To use ggplot I need to first install the ggplot2 package. To install any package in R I use the install.packages() command along with the package name.
+
+The install is a one time only requirement. The package is now on our computer. I don't need to re-install it.
+
+However, I can't just use it without leading it up with a library() call.
+
+```{r}
+plot(cars)
+```
+```{r}
+library(ggplot2)
+ggplot(cars)
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(cars) +
+  aes(x=speed, y=dist)
+```
+
+```{r}
+ggplot(data=cars)+
+  aes(x=speed, y=dist)+ geom_point()
+```
+
+I want a trend line to show the relationship between speed and stopping distance.
+
+```{r}
+ggplot(data=cars)+
+  aes(x=speed, y=dist)+
+geom_point()+
+geom_line()
+```
+
+```{r}
+ggplot(data=cars)+
+  aes(x=speed, y=dist)+
+geom_point()+
+geom_smooth()
+```
+
+```{r}
+ggplot(data=cars)+
+  aes(x=speed, y=dist)+
+geom_point()+
+  geom_smooth()+
+geom_smooth(method = "lm", se=FALSE)
+```
+
+
+
+
+# Gene expression example
+
+The `head()` function
+
+```{r}
+url <- "https://bioboot.github.io/bimm143_S20/class-material/up_down_expression.txt"
+genes <- read.delim(url)
+head(genes, 10)
+```
+
+```{r}
+nrow(genes)
+```
+
+```{r}
+ncol(genes)
+```
+
+```{r}
+table(genes$State)
+```
+
+```{r}
+ggplot(genes)+
+  aes(Condition1, Condition2)+ geom_point()
+```
+
+
+```{r}
+ggplot(genes)+
+  aes(Condition1, Condition2, color = State)+ geom_point()+
+  labs(title="Some Plot",
+       subtitle="With a Subtitle")
+```
+
+```{r}
+p <- ggplot(genes)+
+  aes(Condition1, Condition2, color = State)+ geom_point()+
+  labs(title="Some Plot",
+       subtitle="With a Subtitle")
+p + scale_colour_manual( values=c("blue","gray","red") )
+```
+
+
+```{r}
+p <- ggplot(genes)+
+  aes(Condition1, Condition2, color = State)+ geom_point()+
+  labs(title="Some Plot")
+p + scale_colour_manual(values=c("blue","gray","red")) +
+    labs(title="Gene Expresion Changes Upon Drug Treatment",
+         x="Control (no drug) ",
+         y="Drug Treatment")
+```
+
+I want some text **bold** or *italicized*
+
+```{r}
+# File location online
+url <- "https://raw.githubusercontent.com/jennybc/gapminder/master/inst/extdata/gapminder.tsv"
+gapminder <- read.delim(url)
+head(gapminder,10)
+```
+
+```{r}
+# install.packages("dplyr")  ## un-comment to install if needed
+library(dplyr)
+
+gapminder_2007 <- gapminder %>% filter(year==2007)
+```
+
+```{r}
+ggplot(gapminder_2007) +
+  aes(x=gdpPercap, y=lifeExp, color=continent, size=pop) +
+  geom_point(alpha=0.5)+  scale_size_area(max_size = 10)
+```
+
+```{r}
+gapminder_1957 <- gapminder %>% filter(year==1957)
+
+ggplot(gapminder_1957) + 
+  aes(x = gdpPercap, y = lifeExp, color=continent,
+                 size = pop) +
+  geom_point(alpha=0.7) + 
+  scale_size_area(max_size = 10)
+```
+All ggplot
