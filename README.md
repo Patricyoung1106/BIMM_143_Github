@@ -8,7 +8,7 @@ My class work from [BIMM143](https://bioboot.github.io/bimm143_W23/) w23 at Univ
 - Class 4: Bioinformatics data analysis with R
 - Class 5: [Data exploration and visualization in R]()
 - Class 6: Why, when and how of writing your own R functions
-- Class 7: Introduction to machine learning for Bioinformatics  [code](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/Class07/BIMM143%20Lab%2007.qmd)
+- Class 7: [Introduction to machine learning for Bioinformatics](https://github.com/Patricyoung1106/BIMM_143_Github/blob/main/Class07/BIMM143%20Lab%2007.qmd)
 - Class 8: Analysis and visualization of high dimensional datasets
 - Class 9: Structural Bioinformatics (AlphaFold)
 - Class 10: Halloween Candy Mini-Project
